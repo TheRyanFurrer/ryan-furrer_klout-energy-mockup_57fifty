@@ -1,0 +1,54 @@
+:root {
+  font-family: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+select {
+  color: #000;
+}
+
+.container {
+  background: #000;
+  display: flex;
+  justify-content: space-around;
+}
+
+.inner-left,
+.inner-right {
+  // outline: 1px solid red;
+  padding: 3rem;
+  width: 50%;
+}
+
+.inner-left {
+  background-color: #fff;
+}
+
+.inner-right {
+  .product-info-container,
+  .product-selection-container {
+    display: flex;
+  }
+
+  ul {
+    list-style: none;
+  }
+  aside {
+    align-items: center;
+    display: flex;
+    img {
+      width: 25%;
+    }
+  }
+}

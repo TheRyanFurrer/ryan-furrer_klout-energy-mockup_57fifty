@@ -1,0 +1,63 @@
+:root {
+  font-family: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+select {
+  color: #000;
+}
+
+.container {
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.inner-left,
+.inner-right {
+  padding: 3rem;
+  width: 50%;
+}
+
+.inner-left {
+  background-color: #fff;
+}
+
+.inner-right .product-info-container,
+.inner-right .product-selection-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inner-right ul {
+  list-style: none;
+}
+
+.inner-right aside {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inner-right aside img {
+  width: 25%;
+}
+/*# sourceMappingURL=styles.css.map */
