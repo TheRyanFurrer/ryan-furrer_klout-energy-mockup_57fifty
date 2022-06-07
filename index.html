@@ -14,47 +14,97 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="container">
-      <div class="inner-left">
-        <img
-          src="https://cdn.shopify.com/s/files/1/0607/2251/2130/products/KarmaJuicyBurst_2048x2048.png?v=1651773484"
-          alt=""
-        />
-      </div>
-      <div class="inner-right">
-        <div class="product-info-container">
-          <div>
-            <h3 class="product-name">Karma</h3>
-            <p class="product-description">Everyday Pre-Workout</p>
-          </div>
-          <p class="price">$49.99</p>
-        </div>
-        <div class="product-selection-container">
-          <select>
-            <option value="Juicy Burst">Juicy Burst</option>
-            <option value="Nektur">Nektur</option>
-            <option value="Poison Apple">Poison Apple</option>
-          </select>
-          <select>
-            <option value="1">1</option>
-          </select>
-          <button type="submit">Add to Cart</button>
-        </div>
-        <ul>
-          <li>No banned substances</li>
-          <li>Fully dosed ingredients</li>
-          <li>Gives you energy, focus, & strength</li>
-          <li>Formulated by industry experts</li>
-          <li>5-star taste</li>
-        </ul>
-        <aside class="info">
+    <div class="body-container">
+      <section class="container">
+        <div class="inner-left-container">
           <img
-            src="https://cdn.shopify.com/s/files/1/0607/2251/2130/files/Site_Logo_v3_380x.png?v=1650138333"
+            src="https://cdn.shopify.com/s/files/1/0607/2251/2130/products/KarmaJuicyBurst_2048x2048.png?v=1651773484"
             alt=""
           />
-          <p>This Prodcut Earns you 217 Points</p>
-        </aside>
-      </div>
-    </section>
+        </div>
+        <div class="inner-right-container">
+          <div>
+            <div class="product-info-container">
+              <div>
+                <h2 class="product-name">Karma</h2>
+                <small class="product-description">Everyday Pre-Workout</small>
+              </div>
+              <p class="price pink">$49.99</p>
+            </div>
+            <div class="product-selection-container">
+              <select>
+                <option value="Juicy Burst">Juicy Burst</option>
+                <option value="Nektur">Nektur</option>
+                <option value="Poison Apple">Poison Apple</option>
+              </select>
+              <div>
+                <div class="qty-selection">
+                  <button>-</button>
+                  <p>1</p>
+                  <button>+</button>
+                </div>
+                <button type="submit" class="submit">Add to Cart</button>
+              </div>
+            </div>
+            <ul>
+              <li>No banned substances</li>
+              <li>Fully dosed ingredients</li>
+              <li>Gives you energy, focus, & strength</li>
+              <li>Formulated by industry experts</li>
+              <li>5-star taste</li>
+            </ul>
+            <aside class="info">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0607/2251/2130/files/Site_Logo_v3_380x.png?v=1650138333"
+                alt=""
+              />
+              <small>This Product Earns you 217 Points</small>
+            </aside>
+          </div>
+          <aside class="rankings">
+            <div class="energy">
+              <p>Energy</p>
+              <meter
+                id="energy"
+                min="0"
+                max="100"
+                optimum="60"
+                value="60"
+              ></meter>
+            </div>
+            <div class="focus">
+              <p>Focus</p>
+              <meter
+                id="focus"
+                min="0"
+                max="100"
+                optimum="100"
+                value="100"
+              ></meter>
+            </div>
+            <div class="pump">
+              <p>Pump</p>
+              <meter
+                id="pump"
+                min="0"
+                max="100"
+                optimum="75"
+                value="75"
+              ></meter>
+            </div>
+            <div class="anxiety-free">
+              <p>anxiety-free</p>
+              <meter
+                id="anxiety-free"
+                min="0"
+                max="100"
+                optimum="90"
+                value="90"
+              ></meter>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

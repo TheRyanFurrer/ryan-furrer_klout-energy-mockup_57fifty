@@ -1,12 +1,59 @@
 :root {
   font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+
+  --base-accent: 327, 65%;
+  --palette-accent-10: hsla(var(--base-accent), 10%, 1);
+  --palette-accent-20: hsla(var(--base-accent), 20%, 1);
+  --palette-accent-30: hsla(var(--base-accent), 30%, 1);
+  --palette-accent-40: hsla(var(--base-accent), 40%, 1);
+  --palette-accent-50: hsla(var(--base-accent), 50%, 1);
+  --palette-accent-60: hsla(var(--base-accent), 60%, 1);
+  --palette-accent-70: hsla(var(--base-accent), 70%, 1);
+  --palette-accent-80: hsla(var(--base-accent), 80%, 1);
+  --palette-accent-90: hsla(var(--base-accent), 90%, 1);
+  --palette-accent-100: hsla(var(--base-accent), 100%, 1);
+
+  --white: hsla(255, 100%, 100%, 1);
+  --black: hsla(0, 0%, 0%, 1);
 }
 
 * {
+  box-sizing: border-box;
+  color: var(--white);
+  font-style: italic;
   margin: 0;
   padding: 0;
-  font-style: italic;
-  color: #fff;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+small {
+  font-size: 0.850rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 img {
@@ -15,40 +62,168 @@ img {
 
 button,
 select {
-  color: #000;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.pink {
+  color: var(--palette-accent-60);
+}
+
+body {
+  background: #252525;
+  display: flex;
+  height: 100vh;
+  line-height: 1.5;
+  place-content: center;
+  place-items: center;
+}
+
+.body-container {
+  max-width: 85ch;
 }
 
 .container {
-  background: #000;
+  // background: var(--black);
+  background: linear-gradient(100deg, var(--white) 0 50%, var(--black) 50% 100%);
   display: flex;
-  justify-content: space-around;
 }
 
-.inner-left,
-.inner-right {
-  // outline: 1px solid red;
-  padding: 3rem;
-  width: 50%;
+.inner-left-container,
+.inner-right-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 3rem 5rem;
+  width: 100%;
 }
 
-.inner-left {
-  background-color: #fff;
-}
+.inner-right-container {
+  width: 100%;
 
-.inner-right {
-  .product-info-container,
-  .product-selection-container {
+
+.rankings {
+    background: #454545;
+    bottom: -14.5%;
     display: flex;
+    gap: .75rem;
+    justify-content: space-around;
+    left: -41%;
+    line-height: 1;
+    padding: .25rem;
+    position: relative;
+    width: 168%;
+
+    div {
+      p {
+        font-size: .85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      meter {
+        height: .75rem;
+        width: 100%;
+      }
+
+      meter::-webkit-meter-bar {
+        background-color: #fff;
+      }
+
+      meter::-webkit-meter-optimum-value {
+        background-image: linear-gradient(90deg,
+            #db56a0);
+        background-size: 100% 100%;
+      }
+    }
   }
 
-  ul {
-    list-style: none;
-  }
-  aside {
-    align-items: center;
-    display: flex;
-    img {
-      width: 25%;
+  div {
+    width: 100%;
+  
+    .product-info-container {
+      align-items: center;
+      display: flex;
+      line-height: 1.5em;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        
+        .product-name {
+          font-weight: 900;
+        }
+      }
+
+      .price {
+        font-size: 2.25rem;
+        font-weight: 700;
+      }
+    }
+  
+    .product-selection-container {
+      display: flex;
+      flex-flow: column;
+      gap: .5rem;
+      
+      select {
+        font-size: 1.25rem;
+        font-style: normal;
+        padding: .5rem 0;
+        padding-right: 3rem;
+      }
+
+      div {
+        display: flex;
+        gap: .5rem;
+        width: 100%;
+
+        .qty-selection {
+          align-items: center;
+          background: var(--white);
+          display: flex;
+          flex-grow: 1;
+          justify-content: space-around;
+          width: 33%;
+
+          button,
+          p {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--black);
+          }
+
+          button:first-of-type {
+            font-size: 1.25rem;
+          }
+        }
+        .submit {
+          font-weight: 700;
+          padding: .5rem 2rem;
+          text-transform: uppercase;
+          width: 66%;
+        }
+      }
+
+    }
+  
+    ul {
+      list-style: none;
+      margin: 1rem 0;
+    }
+  
+    .info {
+      align-items: center;
+      display: flex;
+  
+      img {
+        margin-left: -.5rem;
+        width: 25%;
+      }
     }
   }
 }

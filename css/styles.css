@@ -1,12 +1,60 @@
 :root {
   font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  --base-accent: 327, 65%;
+  --palette-accent-10: hsla(var(--base-accent), 10%, 1);
+  --palette-accent-20: hsla(var(--base-accent), 20%, 1);
+  --palette-accent-30: hsla(var(--base-accent), 30%, 1);
+  --palette-accent-40: hsla(var(--base-accent), 40%, 1);
+  --palette-accent-50: hsla(var(--base-accent), 50%, 1);
+  --palette-accent-60: hsla(var(--base-accent), 60%, 1);
+  --palette-accent-70: hsla(var(--base-accent), 70%, 1);
+  --palette-accent-80: hsla(var(--base-accent), 80%, 1);
+  --palette-accent-90: hsla(var(--base-accent), 90%, 1);
+  --palette-accent-100: hsla(var(--base-accent), 100%, 1);
+  --white: hsla(255, 100%, 100%, 1);
+  --black: hsla(0, 0%, 0%, 1);
 }
 
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--white);
+  font-style: italic;
   margin: 0;
   padding: 0;
-  font-style: italic;
-  color: #fff;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+small {
+  font-size: 0.850rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 img {
@@ -15,40 +63,197 @@ img {
 
 button,
 select {
-  color: #000;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.pink {
+  color: var(--palette-accent-60);
+}
+
+body {
+  background: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  line-height: 1.5;
+  place-content: center;
+  place-items: center;
+}
+
+.body-container {
+  max-width: 85ch;
 }
 
 .container {
-  background: #000;
+  background: linear-gradient(100deg, var(--white) 0 50%, var(--black) 50% 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.inner-left-container,
+.inner-right-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 5rem;
+  width: 100%;
+}
+
+.inner-right-container {
+  width: 100%;
+}
+
+.inner-right-container .rankings {
+  background: #454545;
+  bottom: -14.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .75rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  left: -41%;
+  line-height: 1;
+  padding: .25rem;
+  position: relative;
+  width: 168%;
 }
 
-.inner-left,
-.inner-right {
-  padding: 3rem;
-  width: 50%;
+.inner-right-container .rankings div p {
+  font-size: .85rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.inner-left {
+.inner-right-container .rankings div meter {
+  height: .75rem;
+  width: 100%;
+}
+
+.inner-right-container .rankings div meter::-webkit-meter-bar {
   background-color: #fff;
 }
 
-.inner-right .product-info-container,
-.inner-right .product-selection-container {
+.inner-right-container .rankings div meter::-webkit-meter-optimum-value {
+  background-image: -webkit-gradient(linear, left top, right top, from(#db56a0));
+  background-image: linear-gradient(90deg, #db56a0);
+  background-size: 100% 100%;
+}
+
+.inner-right-container div {
+  width: 100%;
+}
+
+.inner-right-container div .product-info-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 1.5em;
 }
 
-.inner-right ul {
+.inner-right-container div .product-info-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inner-right-container div .product-info-container div .product-name {
+  font-weight: 900;
+}
+
+.inner-right-container div .product-info-container .price {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.inner-right-container div .product-selection-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: .5rem;
+}
+
+.inner-right-container div .product-selection-container select {
+  font-size: 1.25rem;
+  font-style: normal;
+  padding: .5rem 0;
+  padding-right: 3rem;
+}
+
+.inner-right-container div .product-selection-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  width: 100%;
+}
+
+.inner-right-container div .product-selection-container div .qty-selection {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 33%;
+}
+
+.inner-right-container div .product-selection-container div .qty-selection button,
+.inner-right-container div .product-selection-container div .qty-selection p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.inner-right-container div .product-selection-container div .qty-selection button:first-of-type {
+  font-size: 1.25rem;
+}
+
+.inner-right-container div .product-selection-container div .submit {
+  font-weight: 700;
+  padding: .5rem 2rem;
+  text-transform: uppercase;
+  width: 66%;
+}
+
+.inner-right-container div ul {
   list-style: none;
+  margin: 1rem 0;
 }
 
-.inner-right aside {
+.inner-right-container div .info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -57,7 +262,8 @@ select {
   display: flex;
 }
 
-.inner-right aside img {
+.inner-right-container div .info img {
+  margin-left: -.5rem;
   width: 25%;
 }
 /*# sourceMappingURL=styles.css.map */
